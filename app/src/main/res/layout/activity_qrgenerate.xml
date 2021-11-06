@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center_horizontal"
+    tools:context=".Qrgenerate">
+
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="379dp"
+        android:layout_height="69dp"
+        android:ems="10"
+        android:textSize="10sp"
+        android:textAlignment="center"
+        android:hint=" Enter data for Qr Code generation "
+        android:inputType="textPersonName"
+        android:padding="12dp"
+
+        />
+
+    <Button
+        android:id="@+id/generate"
+        android:onClick="generate"
+        android:backgroundTint="@color/teal_200"
+        android:textColor="@color/black"
+        android:layout_width="132dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Generate" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/output"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true" />
+
+    <Button
+        android:id="@+id/share"
+        android:onClick="share"
+        android:layout_width="119dp"
+        android:layout_height="77dp"
+        android:background="@drawable/share"
+        android:foreground="@drawable/share"
+        android:foregroundTint="@color/teal_200"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/download"
+        android:onClick="download"
+        android:layout_width="119dp"
+        android:layout_height="77dp"
+        android:background="@drawable/download"
+        android:foreground="@drawable/download"
+        android:foregroundTint="@color/teal_200"
+        tools:ignore="MissingConstraints" />
+
+    <com.google.android.gms.ads.AdView
+        xmlns:ads="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/adView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_alignParentBottom="true"
+        ads:adSize="SMART_BANNER"
+        ads:adUnitId="ca-app-pub-4026568549714819/5117026625">
+
+    </com.google.android.gms.ads.AdView>
+
+
+</LinearLayout>
